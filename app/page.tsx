@@ -1,11 +1,36 @@
 'use client'
 import { Nav } from "@/components/nav";
 import LogoGrid from "@/components/logo-grid";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function Home() {
-  const [initialTxt , setTxt] = useState('VII8');
+  const [isTyping, setIsTyping] = useState(false);
+  const [displayedText, setDisplayedText] = useState("");
+  const [initialTxt, setTxt] = useState("VII8");
+
+  const handleToggle = () => {
+    setIsTyping(true);
+
+    const newText = initialTxt === "VII8" ? "VII.VIII" : "VII8";
+    let index = 0;
+
+    // Typewriter effect logic
+    const interval = setInterval(() => {
+      setDisplayedText(newText.slice(0, index + 1));
+      index++;
+
+      if (index === newText.length) {
+        clearInterval(interval);
+        setIsTyping(false);
+        setTxt(newText);
+      }
+    }, 100); // Adjust typing speed here
+  };
+
+  useEffect(() => {
+    setDisplayedText(initialTxt); // Initialize displayedText
+  }, [initialTxt]);
   return (
     <div className="min-h-screen">
       <Nav />
@@ -53,7 +78,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="text-4xl font-cinzel-decorative">Typography</h2>
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg leading-relaxed max-w-2xl">
                 Our typography system combines the ornate elegance of Cinzel
                 Decorative for primary headings with Cinzel for secondary text
                 and Playfair Display for body copy. This hierarchy creates a
@@ -103,21 +128,35 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="aspect-[4/5] relative bg-[#121212] flex items-center justify-center text-white" 
-                onClick={()=>{initialTxt === 'VII8' ? setTxt('VII.VIII') : setTxt('VII8')}}
+                onClick={handleToggle}
             
             >
               {/* <div className="text-6xl font-cinzel-decorative text-"> */}
-              <div
-                className="text-8xl font-cinzel-decorative text-transparent bg-clip-text"
+              {/* <div
+                className="text-6xl font-cinzel-decorative text-transparent bg-clip-text"
                 style={{
                   // backgroundImage: 'linear-gradient(to right, #2f2f2e, #d6b003,rgb(179, 154, 12),rgb(154, 142, 32),rgb(164, 140, 6), #2f2f2e)',
                   backgroundImage:
                     "linear-gradient(to right, #2f2f2e,rgb(164, 140, 6), #d6b003,rgb(154, 142, 32),rgb(164, 140, 6), #2f2f2e)",
+                    transition: "all 0.8s ease",
+                    transform: isToggling ? "rotate(980deg) scale(0.1)" : "rotate(0deg)",
+                    opacity: isToggling ? 0.5 : 1,
                 }}
               >
-                {/* VII.VIII */}
+                {/* VII.VIII *
                 {initialTxt}
-              </div>
+              </div> */}
+              <div
+        className="text-6xl sm:text-8xl font-cinzel-decorative text-transparent bg-clip-text"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #2f2f2e, rgb(164, 140, 6), #d6b003, rgb(154, 142, 32), rgb(164, 140, 6), #2f2f2e)",
+          transition: "opacity 0.8s ease",
+          opacity: isTyping ? 0.7 : 1,
+        }}
+      >
+        {displayedText}
+      </div>
               <div className="absolute bottom-8 left-8 text-2xl font-cinzel">
                 ७ | ८
               </div>
@@ -254,7 +293,7 @@ export default function Home() {
 
     {/* Footer Bottom */}
     
-    <div className="text-sm text-gray-700 mt-12 font-cinzel-decorative">
+    <div className="text-sm text-gray-700 mt-12 font-cinzel-decorative max-w-2xl">
   <p>
     &copy;{new Date().getFullYear()} |
     <span className="text-sm font-cinzel-decorative"> 7/8 Coffee & Co. </span> 
