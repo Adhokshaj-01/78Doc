@@ -1,8 +1,11 @@
+'use client'
 import { Nav } from "@/components/nav";
 import LogoGrid from "@/components/logo-grid";
+import { useState } from "react";
 
 
 export default function Home() {
+  const [initialTxt , setTxt] = useState('VII8');
   return (
     <div className="min-h-screen">
       <Nav />
@@ -19,7 +22,7 @@ export default function Home() {
             <span>७ | ८</span>
           </div>
         </div>
-        <div className="absolute bottom-8 left-[1/2] max-w-md text-sm leading-relaxed text-center">
+        <div className="absolute bottom-8 left-[1/2] max-w-md text-sm leading-relaxed text-center font-serif">
           Our coffee embodies the dedication to quality, crafted with the
           precision of a 7/8 time signature in music—complex yet perfectly
           balanced. At VII.VIII, every cup is a harmonious blend of care and
@@ -63,11 +66,11 @@ export default function Home() {
                 <p className="text-sm">Cinzel Decorative</p>
               </div>
               <div className="space-y-4">
-                <p className="text-2xl sm:text-xl font-cinzel-decorative">
-                  ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                <p className="text-md sm:text-2xl font-cinzel-decorative">
+                  |   ABCDEFGHIJKLMNOPQRSTUVWXYZ
                 </p>
-                <p className="text-xl sm:text-lg font-cinzel-decorative">
-                  1234567890
+                <p className="text-md sm:text-2xl font-cinzel-decorative">
+                  -  1234567890
                 </p>
               </div>
               <div className="space-y-2 mt-8">
@@ -75,10 +78,10 @@ export default function Home() {
                 <p className="text-sm">Cinzel</p>
               </div>
               <div className="space-y-4">
-                <p className="text-2xl sm:text-xl font-cinzel">
-                  ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                <p className="text-md sm:text-2xl font-cinzel">
+                  |  ABCDEFGHIJKLMNOPQRSTUVWXYZ
                 </p>
-                <p className="text-xl sm:text-lg font-cinzel">1234567890</p>
+                <p className="text-md sm:text-2xl font-cinzel"> - 1234567890</p>
               </div>
             </div>
           </div>
@@ -99,7 +102,10 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="aspect-[4/5] relative bg-[#121212] flex items-center justify-center text-white">
+            <div className="aspect-[4/5] relative bg-[#121212] flex items-center justify-center text-white" 
+                onClick={()=>{initialTxt === 'VII8' ? setTxt('VII.VIII') : setTxt('VII8')}}
+            
+            >
               {/* <div className="text-6xl font-cinzel-decorative text-"> */}
               <div
                 className="text-8xl font-cinzel-decorative text-transparent bg-clip-text"
@@ -110,7 +116,7 @@ export default function Home() {
                 }}
               >
                 {/* VII.VIII */}
-                VII8
+                {initialTxt}
               </div>
               <div className="absolute bottom-8 left-8 text-2xl font-cinzel">
                 ७ | ८
