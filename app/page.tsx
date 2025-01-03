@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Nav } from "@/components/nav";
 import LogoGrid from "@/components/logo-grid";
+
 
 export default function Home() {
   return (
@@ -20,9 +20,10 @@ export default function Home() {
           </div>
         </div>
         <div className="absolute bottom-8 left-[1/2] max-w-md text-sm leading-relaxed text-center">
-          VII.VIII is where precision meets passion in every cup. Our commitment
-          to quality is as unwavering as the 7/8 time signature in music -
-          complex, yet perfectly balanced.
+          Our coffee embodies the dedication to quality, crafted with the
+          precision of a 7/8 time signature in music—complex yet perfectly
+          balanced. At VII.VIII, every cup is a harmonious blend of care and
+          craftsmanship.
         </div>
       </section>
 
@@ -101,7 +102,7 @@ export default function Home() {
             <div className="aspect-[4/5] relative bg-[#121212] flex items-center justify-center text-white">
               {/* <div className="text-6xl font-cinzel-decorative text-"> */}
               <div
-                className="text-6xl font-cinzel-decorative text-transparent bg-clip-text"
+                className="text-8xl font-cinzel-decorative text-transparent bg-clip-text"
                 style={{
                   // backgroundImage: 'linear-gradient(to right, #2f2f2e, #d6b003,rgb(179, 154, 12),rgb(154, 142, 32),rgb(164, 140, 6), #2f2f2e)',
                   backgroundImage:
@@ -171,6 +172,93 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className=" text-black py-12">
+  <div className="max-w-6xl mx-auto space-y-12 text-center">
+    {/* Footer Branding */}
+    {/* <div>
+      <h3 className="text-2xl font-cinzel-decorative text-gray-600">
+        VII8 -
+      </h3>
+    </div> */}
+
+    {/* Footer Links */}
+    {/* <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div>
+        <h4 className="text-xl font-cinzel">Quick Links</h4>
+        <ul className="mt-4 space-y-4 text-sm">
+          <li>
+            <a href="#home" className="hover:text-[#D4A44C]">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#about" className="hover:text-[#D4A44C]">
+              About Us
+            </a>
+          </li>
+          <li>
+            <a href="#products" className="hover:text-[#D4A44C]">
+              Products
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="hover:text-[#D4A44C]">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 className="text-xl font-cinzel">Social Media</h4>
+        <div className="mt-4 space-x-6">
+          <a href="#" className="hover:text-[#D4A44C] text-2xl">
+            {/* Replace with your icons, like Font Awesome or Heroicons 
+            <i className="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" className="hover:text-[#D4A44C] text-2xl">
+            <i className="fab fa-twitter"></i>
+          </a>
+          <a href="#" className="hover:text-[#D4A44C] text-2xl">
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a href="#" className="hover:text-[#D4A44C] text-2xl">
+            <i className="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 className="text-xl font-cinzel">Newsletter</h4>
+        <div className="mt-4 space-y-4">
+          <p className="text-sm">
+            Subscribe to our newsletter for the latest updates, promotions, and news!
+          </p>
+          <input
+            type="email"
+            className="w-full px-4 py-2 bg-[#2f2f2f] text-white border border-[#D4A44C] rounded-md"
+            placeholder="Your email"
+          />
+          <button className="w-full mt-2 bg-[#D4A44C] py-2 text-white rounded-md hover:bg-[#C65D4B]">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div> */}
+
+    {/* Footer Bottom */}
+    
+    <div className="text-sm text-gray-700 mt-12 font-cinzel-decorative">
+  <p>
+    &copy;{new Date().getFullYear()} |
+    <span className="text-sm font-cinzel-decorative"> 7/8 Coffee & Co. </span> 
+    |&nbsp; Designed and Developed by -  Tyler Durden
+  </p>
+</div>
+
+  </div>
+</section>
+
     </div>
   );
 }
