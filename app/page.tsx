@@ -41,8 +41,8 @@ export default function Home() {
           <h1 className="text-[20vw] font-cinzel-decorative leading-none tracking-tight">
             {/* VII.VIII */} VII8
           </h1>
-          <div className="flex items-center justify-center gap-8 text-2xl font-cinzel">
-            <span>7/8 coffee & Co.</span>
+          <div className="flex items-center justify-center gap-8 text-2xl font-[Courier Prime] ">
+            <span>7/8 COFFEE & Co.</span>
             <span className="w-2 h-2 bg-black rounded-full"></span>
             <span>७ | ८</span>
           </div>
@@ -73,7 +73,7 @@ export default function Home() {
       </section>
 
       {/* Typography Section */}
-      <section className="min-h-screen py-24 px-6 md:px-12 bg-[#EAEAE8]">
+      <section className="min-h-screen py-24 px-6 md:px-12  bg-[#09090B] text-white">
         <div className="max-w-6xl mx-auto space-y-24">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -184,7 +184,7 @@ export default function Home() {
       </section>
 
       {/* Color Palette Section */}
-      <section className="min-h-screen py-24 px-6 md:px-12 bg-[#EAEAE8]">
+      <section className="min-h-screen py-24 px-6 md:px-12 bg-[#09090B] text-white">
         <div className="max-w-6xl mx-auto space-y-24">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -198,12 +198,12 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-3 gap-4">
               {[
-                { color: "#C65D4B", name: "Terracotta" },
-                { color: "#D4A44C", name: "Golden" },
-                { color: "#8C9CB1", name: "Slate" },
-                { color: "#789395", name: "Sage" },
-                { color: "#C69B9B", name: "Rose" },
-                { color: "#98B4A6", name: "Mint" },
+                { color: "#E97451", name: "Burnt Sienna " },
+                { color: "#DAA520", name: "Golden Ochre" },
+                { color: "#FFFFF0", name: "Ivory White " },
+                { color: "#89d99e", name: "Light Jade" },
+                { color: "#89d9d6", name: "Mint" },
+                { color: "#ac71c7", name: "Orchid Purple" },
               ].map((color, i) => (
                 <div key={i} className="space-y-2">
                   <div
