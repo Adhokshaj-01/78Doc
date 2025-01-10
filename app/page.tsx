@@ -41,7 +41,7 @@ export default function Home() {
           <h1 className="text-[20vw] font-cinzel-decorative leading-none tracking-tight">
             {/* VII.VIII */} VII8
           </h1>
-          <div className="flex items-center justify-center gap-8 text-2xl font-[Courier Prime] ">
+          <div className="flex items-center justify-center gap-8 text-2xl font-cinzel ">
             <span>7/8 COFFEE & Co.</span>
             <span className="w-2 h-2 bg-black rounded-full"></span>
             <span>७ | ८</span>
